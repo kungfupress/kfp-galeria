@@ -1,0 +1,9 @@
+.mb-botonera-galeria {
+	clear: both;
+}
+
+.mb-miniatura-galeria {
+	float: left;
+	width: 90px;
+	height: 90px;
+}
