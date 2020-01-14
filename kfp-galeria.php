@@ -21,4 +21,3 @@ define( 'KFP_GALERIA_VERSION', '1.0.0' );
 require_once KFP_GALERIA_DIR . 'include/show-metabox.php';
 require_once KFP_GALERIA_DIR . 'include/save-metabox.php';
 require_once KFP_GALERIA_DIR . 'include/show-gallery-frontend.php';
-
