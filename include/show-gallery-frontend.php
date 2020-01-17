@@ -41,8 +41,9 @@ add_action( 'wp_enqueue_scripts', 'kfp_galeria_scripts' );
  * @return void
  */
 function kfp_galeria_scripts() {
-	if ( is_singular() || is_home() || is_front_page() ) {
-		wp_register_script( 'kfp-galeria-lightbox', 
+	if ( is_singular( 'viaje' ) ) {
+		wp_register_script(
+			'kfp-galeria-lightbox',
 			KFP_GALERIA_PLUGIN_URL . 'js/jquery.fancybox.min.js',
 			array( 'jquery' ),
 			KFP_GALERIA_VERSION,
