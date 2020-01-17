@@ -1,9 +1,14 @@
-.mb-botonera-galeria {
-	clear: both;
+#mb-vista-previa-galeria {
+	padding: 1em;
 }
 
 .mb-miniatura-galeria {
 	float: left;
-	width: 90px;
-	height: 90px;
+	width: 100px;
+	height: 100px;
+}
+
+#mb-botonera-galeria {
+	clear: both;
+	padding: 1em;
 }
