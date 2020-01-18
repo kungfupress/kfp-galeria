@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 			meta_gallery_frame = wp.media.gallery.edit( "[gallery ids='" + ids_galeria + "']" );
 		}
 		// Cuando se actualice la galería, pulsando el botón correspondiente de la modal, 
-		// hay que actualizar las miniaturas y los valores que se guardaran en el input oculto.
+		// actualiza las miniaturas y los valores que se guardarán en el input oculto.
 		meta_gallery_frame.on("update", function(selection) {
 			var $vista_previa = $( '#mb-vista-previa-galeria' )
 			$vista_previa.html( '' );
@@ -37,6 +37,7 @@ jQuery(document).ready(function($){
 			var ids = selection.models.map(
 				function( e ) {
 					elemento = e.toJSON();
+					console.log(elemento);
 					imagen_url = typeof elemento.sizes.thumbnail !== 'undefined' ? elemento.sizes.thumbnail.url : elemento.url;
 					html = "<div class='mb-miniatura-galeria'><img src='" + imagen_url + "'></div>";
 					$vista_previa.append( html );
