@@ -1,6 +1,6 @@
 <?php
 /**
- * File: kfp-galeria/include/show-metabox.php
+ * File: kfp-galeria/include/create-metabox.php
  *
  * @package kfp_galeria
  */

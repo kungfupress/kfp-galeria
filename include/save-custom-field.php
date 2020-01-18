@@ -1,13 +1,13 @@
 <?php
 /**
- * File: kfp-galeria/include/save-metabox.php
+ * File: kfp-galeria/include/save-custom-field.php
  *
  * @package kfp_galeria
  */
 
 defined( 'ABSPATH' ) || die();
 
-add_action( 'save_post', 'kfp_galeria_save_metabox' );
+add_action( 'save_post', 'kfp_galeria_save_custom_fied' );
 /**
  * Graba los campos personalizados que vienen del formulario de edición del post
  *
@@ -15,7 +15,7 @@ add_action( 'save_post', 'kfp_galeria_save_metabox' );
  *
  * @return bool|int
  */
-function kfp_galeria_save_metabox( $post_id ) {
+function kfp_galeria_save_custom_fied( $post_id ) {
 	// Comprueba que el nonce es correcto para evitar ataques CSRF.
 	if ( ! isset( $_POST['galeria_nonce'] ) || ! wp_verify_nonce( $_POST['galeria_nonce'], 'graba_galeria' ) ) {
 		return $post_id;
