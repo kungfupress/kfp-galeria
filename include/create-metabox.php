@@ -37,6 +37,8 @@ function kfp_galeria_show_meta_box( $post ) {
 	$galeria = $post->_galeria;
 	$html    = '<div id="mb-vista-previa-galeria">';
 	if ( ! empty( $galeria ) ) {
+		// El campo galeria almacena los IDs de las imágenes separados por comas
+		// Utiliza explode para obtener un array de IDs.
 		$galeria_ids = explode( ',', $galeria );
 		foreach ( $galeria_ids as $attachment_id ) {
 			$img   = wp_get_attachment_image_src( $attachment_id, 'thumbnail' );
