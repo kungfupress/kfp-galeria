@@ -26,6 +26,9 @@ function kfp_galeria_register_meta_box() {
 
 /**
  * Muestra el meta box para asociar una galería de imágenes
+ * Si la galería ya existe muestra las miniaturas de las imágenes
+ * La información que realmente se graba en el campo meta va en el input oculto
+ * con name 'galeria'
  *
  * @param Post $post Objeto con la entrada o contenido actual.
  * @return void
