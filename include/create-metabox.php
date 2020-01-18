@@ -45,7 +45,7 @@ function kfp_galeria_show_meta_box( $post ) {
 		}
 	}
 	$html .= '</div>';
-	$html .= '<input id="ids_galeria" type="hidden" size="36" name="galeria" value="';
+	$html .= '<input id="ids_galeria" type="hidden" name="galeria" value="';
 	$html .= esc_attr( $galeria ) . '" >';
 	$html .= '<div id="mb-botonera-galeria">';
 	$html .= '<input id="boton_crear_galeria" class="button" type="button" value="';
