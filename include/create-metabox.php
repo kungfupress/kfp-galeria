@@ -77,11 +77,12 @@ function kfp_galeria_admin_scripts() {
 			true
 		);
 		wp_enqueue_script( 'kfp-galeria-meta-box' );
-		wp_enqueue_style(
+		wp_register_style(
 			'kfp-galeria-admin-css',
 			KFP_GALERIA_PLUGIN_URL . 'css/admin.css',
 			array(),
 			KFP_GALERIA_VERSION
 		);
+		wp_enqueue_style( 'kfp-galeria-admin-css' );
 	}
 }
