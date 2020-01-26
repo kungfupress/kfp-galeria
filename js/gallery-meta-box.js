@@ -1,3 +1,9 @@
+/**
+ * File: kfp-galeria/js/gallery-meta-box.js
+ * 
+ * https://github.com/ericandrewlewis/wp-media-javascript-guide
+ */
+
 jQuery(document).ready(function($){
 	var meta_gallery_frame;
 
@@ -10,7 +16,6 @@ jQuery(document).ready(function($){
 		}
 		// Si no hay valores crea una galería de cero, si los hay edita la actual.
 		var ids_galeria = $( '#ids_galeria' ).val();
-		console.log(ids_galeria);
 		if ( !( ids_galeria ) ) {
 			// Crea un nuevo frame de tipo galería
 			meta_gallery_frame = wp.media.frames.wp_media_frame = wp.media( {
@@ -37,7 +42,6 @@ jQuery(document).ready(function($){
 			var ids = selection.models.map(
 				function( e ) {
 					elemento = e.toJSON();
-					console.log(elemento);
 					imagen_url = typeof elemento.sizes.thumbnail !== 'undefined' ? elemento.sizes.thumbnail.url : elemento.url;
 					html = "<div class='mb-miniatura-galeria'><img src='" + imagen_url + "'></div>";
 					$vista_previa.append( html );
