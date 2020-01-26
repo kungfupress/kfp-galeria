@@ -16,7 +16,7 @@ add_action( 'add_meta_boxes', 'kfp_galeria_register_meta_box' );
 function kfp_galeria_register_meta_box() {
 	add_meta_box(
 		'kfp-galeria',
-		'Galería',
+		'Galería de fotos',
 		'kfp_galeria_show_meta_box',
 		'viaje',
 		'normal',
@@ -39,7 +39,7 @@ function kfp_galeria_show_meta_box( $post ) {
 	if ( ! empty( $galeria ) ) {
 		// El campo galeria almacena los IDs de las imágenes separados por comas
 		// Utiliza explode para obtener un array de IDs.
-		$galeria_ids = explode( ',', $galeria );
+		$galeria_ids = explode( ',', $galeria ); // '12, 14, 23, 34'
 		foreach ( $galeria_ids as $attachment_id ) {
 			$img   = wp_get_attachment_image_src( $attachment_id, 'thumbnail' );
 			$html .= '<img class="mb-miniatura-galeria" src="';
