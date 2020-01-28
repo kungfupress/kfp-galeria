@@ -1,4 +1,4 @@
-== KFP Galería ==
+#KFP Galería
 
 Un plugin para aprender a agregar un campo personalizado de tipo galería a un Custom Post Type de WordPress.
 
